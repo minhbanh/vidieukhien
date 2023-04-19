@@ -1,0 +1,61 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  title Temperature&Humidity
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+  script(type='text/javascript').
+    init_reload();
+    function init_reload(){
+      setInterval(function() {
+        $.ajax({
+            type:"get",
+            url:"/lastdata",
+            success:function(data){
+                let str1 =  data.temp;
+                let str2 =  data.hum;
+                $("#data1").text(str1)
+                $("#data2").text(str2)    
+            }
+        })
+      }, 1000);
+    }
+  style.
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        background-color: #FFFF66;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .header {
+        background-color: #f1f1f1;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+    }
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 300px;
+    }
+    h2 {
+        color: #DDD;
+        text-align: center;
+        padding: 60px;
+    }
+    h1 {
+        color: #99FFCC;
+        text-align: center;
+        text-shadow: 2px 2px #99FF00;
+    }
+.header 
+  h1 Temperature && Humidity
+.column(style = 'background-color: #AAA')
+    h2 Nhiệt độ 
+        #data1
+.column(style = 'background-color: #BBB')
+    h2 Độ ẩm
+        #data2
+    <!--script(type='text/javascript' charset='utf-8' src="/script.js")--!>

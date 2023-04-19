@@ -1,0 +1,23 @@
+{
+  "name": "kythuatvidieukhien",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "canvas": "^2.11.2",
+    "chart.js": "^4.2.1",
+    "echarts": "^5.4.2",
+    "express": "^4.18.2",
+    "html": "^1.0.0",
+    "mongoose": "^7.0.3",
+    "pug": "^3.0.2",
+    "serialport": "^10.5.0",
+    "socket.io": "^4.6.1"
+  }
+}

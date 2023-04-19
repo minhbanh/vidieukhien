@@ -1,0 +1,23 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title Hello 
+  // Include the ECharts file you just downloaded
+  script(src='chart.js')
+// Prepare a DOM with a defined width and height for ECharts
+style.
+  #main,
+  html,
+  body {
+  width: 100%;
+  }
+  #main {
+  height: 400px;
+  }
+#main
+script(type='text/javascript').
+  var myChart = echarts.init(document.getElementById('main'));
+  window.addEventListener('resize', function() {
+  myChart.resize();
+  });
+  myChart.setOption(option);
