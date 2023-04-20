@@ -66,7 +66,7 @@ app.get('/data', function(req, res){
   run().catch(console.dir);
 })
 
-app.get("/service", async (req, res) => {
+app.get('/service', async (req, res) => {
   const database = client.db("sensordata");
   const dht22 = database.collection("dht22");
   const result = await dht22.find().toArray();
