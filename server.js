@@ -11,6 +11,7 @@ const client = new MongoClient(url);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static('public'))
 
 app.set('view engine', 'pug')
 app.set('views', 'view')
